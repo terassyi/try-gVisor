@@ -17,3 +17,7 @@ start up docker image with runsc
 ```
 $ sudo docker run --runtime=runsc --rm -it ubuntu /bin/bash
 ```
+to verify that you are running in gVisor
+```
+$ sudo docker run --runtime=runsc --rm -it ubuntu /bin/bash dmesg
+```

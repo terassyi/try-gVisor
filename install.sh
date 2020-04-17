@@ -35,7 +35,10 @@ sudo gpasswd -a $USER docker
 echo '{
     "runtimes": {
         "runsc": {
-            "path": "/usr/bin/runsc"
+            "path": "/usr/bin/runsc",
+            "runtimeArgs": [
+                "--network=host"
+            ]
         }
     }
 }' >> /etc/docker/daemon.json
